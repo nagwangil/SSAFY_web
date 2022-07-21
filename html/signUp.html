@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div {
+      display: flex;
+      flex-direction: row;
+    }
+  </style>
+  <body>
+    <input type="text" class="id" value="아이디" />
+    <div></div>
+    <div>
+      <input type="password" class="password" value="비밀번호" />
+    </div>
+    <button class="signUp-btn">회원가입하기</button>
+    <script>
+      const id = document.querySelector(".id");
+      const password = document.querySelector(".password");
+      const btn = document.querySelector(".signUp-btn");
+
+      btn.addEventListener("mousedown", function (e) {
+        console.log(id.value);
+        //검증 심화
+        //id !== null , undefined, "" -> 너무 많은 비교
+        // if(id )-> 긍정
+        // if(!id) -> 부정
+
+        if (id.value == "아이디" || id.value == "") {
+          alert("아이디가 비엇습니다! 아이디를 입력해주세요!");
+        }
+      });
+    </script>
+  </body>
+</html>

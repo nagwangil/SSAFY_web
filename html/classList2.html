@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .test {
+      color: blue;
+    }
+  </style>
+  <body>
+    <div>HI</div>
+    <script>
+      const div = document.querySelector("div");
+      // div.setAttribute("class", "test");
+      // �̹� �߰��� �Ӽ����̶�� �ش� ���� �����Ѵ�
+
+      div.classList.add("test");
+      div.classList.add("hello");
+      div.classList.add("test");
+      //�̹� �����ȰŸ� ����
+      div.classList.remove("test");
+      div.classList.remove("hello");
+      div.classList.remove("test");
+
+      //����ġó��
+      div.classList.toggle("test");
+      div.classList.toggle("hello");
+      div.classList.toggle("test");
+
+      //True false ����
+      console.log(div.classList.contains("test"));
+      console.log(div.classList.contains("hello"));
+      console.log(div.classList.contains("test"));
+
+      //����
+      div.classList.replace("test", "chicken");
+      div.classList.replace("hello", "chicken");
+      div.classList.replace("test", "chicken");
+    </script>
+  </body>
+</html>
